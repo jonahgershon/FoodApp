@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.willowtree.foodapp.api.FoodishApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -19,7 +21,9 @@ class FoodActivity : AppCompatActivity() {
 
         val foodishApi = retrofit.create(FoodishApi::class.java)
 
-        val foodishResponse = foodishApi.getRandomFoodPic()
-        Log.wtf("JG", "$foodishResponse")
+        GlobalScope.launch {
+            val foodishResponse = foodishApi.getRandomFoodPic()
+            Log.wtf("JG", "$foodishResponse")
+        }
     }
 }

@@ -6,9 +6,9 @@ import retrofit2.http.GET
 interface FoodishApi {
 
     companion object {
-        val BASE_URL = "https://foodish-api.herokuapp.com/images/"
+        const val BASE_URL = "https://foodish-api.herokuapp.com/api/images/"
     }
 
     @GET("pizza")
-    fun getRandomFoodPic() : FoodishResponse
+    suspend fun getRandomFoodPic() : FoodishResponse
 }
