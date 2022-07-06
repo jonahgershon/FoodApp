@@ -1,8 +1,9 @@
-package com.willowtree.foodapp
+package com.willowtree.foodapp.ui.food
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.willowtree.foodapp.R
 import com.willowtree.foodapp.api.FoodishApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Foodapp"
         tools:targetApi="31">
         <activity
-            android:name=".FoodActivity"
+            android:name="com.willowtree.foodapp.ui.food.FoodActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
