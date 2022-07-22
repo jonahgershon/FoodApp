@@ -19,10 +19,16 @@ class FoodViewModel(val foodRepository: FoodRepository) : ViewModel() {
         }
     }
 
+    fun getCategoryFoodPic() {
+        viewModelScope.launch {
+            val foodishResponse = foodRepository.getCategoryFoodPic()
+            foodPicUrl.value = foodishResponse.image
+        }
+    }
+
     @Suppress("UNCHECKED_CAST")
     class Factory(private val foodRepository: FoodRepository) :
         ViewModelProvider.NewInstanceFactory() {
-
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             return FoodViewModel(foodRepository) as T
         }

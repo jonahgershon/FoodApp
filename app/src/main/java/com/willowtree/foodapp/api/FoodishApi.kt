@@ -11,4 +11,7 @@ interface FoodishApi {
 
     @GET("pizza")
     suspend fun getRandomFoodPic() : FoodishResponse
+
+    @GET("samosa")
+    suspend fun getCategoryFoodPic() : FoodishResponse
 }

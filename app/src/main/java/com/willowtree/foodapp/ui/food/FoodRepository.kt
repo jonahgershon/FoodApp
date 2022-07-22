@@ -7,4 +7,7 @@ class FoodRepository (val foodishApi : FoodishApi){
     suspend fun getRandomFoodPic() : FoodishResponse{
         return foodishApi.getRandomFoodPic()
     }
+    suspend fun getCategoryFoodPic() : FoodishResponse{
+        return foodishApi.getCategoryFoodPic()
+    }
 }
