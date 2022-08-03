@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">foodapp</string>
+    <string-array name="food_categories_array">
+        <item>Random</item>
+        <item>Biryani</item>
+        <item>Burger</item>
+        <item>Dessert</item>
+        <item>Dosa</item>
+        <item>Pasta</item>
+        <item>Pizza</item>
+        <item>Rice</item>
+        <item>Samosa</item>
+    </string-array>
 </resources>

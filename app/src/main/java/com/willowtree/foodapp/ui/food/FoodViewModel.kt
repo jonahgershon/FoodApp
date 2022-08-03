@@ -5,26 +5,27 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.willowtree.foodapp.api.data.Category
 import com.willowtree.foodapp.api.data.FoodishResponse
 import kotlinx.coroutines.launch
 
 class FoodViewModel(val foodRepository: FoodRepository) : ViewModel() {
     val foodPicUrl = MutableLiveData<String>()
 
-    fun getRandomFoodPic() {
+    fun getRandomFoodPic(category: Category? = null) {
         Log.e("JG", "getRandomFoodPic called: ViewModel instance: $this")
         viewModelScope.launch {
-            val foodishResponse = foodRepository.getRandomFoodPic()
+            val foodishResponse = foodRepository.getRandomFoodPic(category)
             foodPicUrl.value = foodishResponse.image
         }
     }
-
-    fun getCategoryFoodPic() {
-        viewModelScope.launch {
-            val foodishResponse = foodRepository.getCategoryFoodPic()
-            foodPicUrl.value = foodishResponse.image
-        }
-    }
+//
+//    fun getCategoryFoodPic(category: Category) {
+//        viewModelScope.launch {
+//            val foodishResponse = foodRepository.getRandomFoodPic(category)
+//            foodPicUrl.value = foodishResponse.image
+//        }
+//    }
 
     @Suppress("UNCHECKED_CAST")
     class Factory(private val foodRepository: FoodRepository) :
