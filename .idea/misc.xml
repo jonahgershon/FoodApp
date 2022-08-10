@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1215" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22098388671875002" />
+        <entry key="app/src/main/res/layout/activity_recipe.xml" value="0.24038696289062494" />
         <entry key="app/src/main/res/layout/simple_spinner_dropdown_item.xml" value="0.17477203647416414" />
         <entry key="app/src/main/res/layout/simple_spinner_item.xml" value="0.17477203647416414" />
       </map>

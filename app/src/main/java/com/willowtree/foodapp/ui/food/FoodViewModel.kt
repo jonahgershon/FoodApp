@@ -19,13 +19,6 @@ class FoodViewModel(val foodRepository: FoodRepository) : ViewModel() {
             foodPicUrl.value = foodishResponse.image
         }
     }
-//
-//    fun getCategoryFoodPic(category: Category) {
-//        viewModelScope.launch {
-//            val foodishResponse = foodRepository.getRandomFoodPic(category)
-//            foodPicUrl.value = foodishResponse.image
-//        }
-//    }
 
     @Suppress("UNCHECKED_CAST")
     class Factory(private val foodRepository: FoodRepository) :
